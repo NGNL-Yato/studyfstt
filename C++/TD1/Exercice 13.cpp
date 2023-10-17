@@ -17,6 +17,7 @@ float playerTurn(float total){                  //fonction qui gere le derouleme
     char NumberofThrow;             
     bool correctvalue=false;                    //verifie la valeur donne par lutilisateur
     cout<<"Voulez-vous lancer 1 ou 2 dès  :  ";
+    cin.get(NumberofThrow);
     while(correctvalue==false ){                 //entre dans les conditions si la valeur est verifié
     if ( (NumberofThrow =='1') || (NumberofThrow=='2') ){     //verifie que l'utilisateur a donne 1 ou 2 
         if(NumberofThrow=='1'){                 //Cas 1                                                             
@@ -33,8 +34,7 @@ float playerTurn(float total){                  //fonction qui gere le derouleme
         cin>>NumberofThrow;
     }
     }
-    score=total;
-return score;                                    //donne la valeur du score a chaque fois
+return total;                                    //donne la valeur du score a chaque fois
 }
 
 int main(){
