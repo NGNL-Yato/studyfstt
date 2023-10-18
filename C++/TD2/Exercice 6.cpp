@@ -17,7 +17,7 @@ int permuter_pt(int* first,int* second){
     *second=swap;
 }
 
-void Pointers(){
+void Reference(){
     int First=1,Second=10;
     std::cout<<"La valeur 1 : "<<First<<" et la valeur 2 : "<<Second<<std::endl;
     incrementer_ref(First);
@@ -25,7 +25,7 @@ void Pointers(){
     std::cout<<"La valeur 1 : "<<First<<" et la valeur 2 : "<<Second<<std::endl;
 }
 
-void Reference(){
+void Pointer(){
     int First=1,Second=10;
     int* f=&First;
     int* s=&Second;
