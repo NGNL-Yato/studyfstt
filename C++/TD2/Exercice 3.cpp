@@ -1,10 +1,10 @@
 #include<iostream>
 
 void formalisme_tableau(){
-    int Array[4];
+    int Array[4],repet=0;
     std::cout<<"Fill the table"<<std::endl;
     for(int i=0;i<4;i++){
-        std::cout<<"First Value of Array : ";
+        std::cout<<std::endl<<"Enter the value "<<repet++<<"of the Array :";
         std::cin>>Array[i];
     }
     std::cout<<"The values of the Array are : ";
@@ -21,9 +21,9 @@ void formalisme_pointeur(){     //formalisme Array
     std::cout<<"\n";
     int *Array=new int[taille];  // allocation dynamiqueme du tableau *array=new type[size]
     std::cout<<"Fill the table";
-    int i;
+    int i,repet=0;
     do{
-        std::cout<<std::endl<<"First Value of Array : ";
+        std::cout<<std::endl<<"Enter the value "<<repet++<<"of the Array :";
         std::cin>>*(Array+i);
         i++;
     }while(i<taille);
