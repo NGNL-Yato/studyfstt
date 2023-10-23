@@ -7,3 +7,7 @@ void Call_Number(){
     Calls++;
     cout<<"appel numéro"<<Calls<<endl;
 }
+
+main(){
+    Call_Number();Call_Number();
+}

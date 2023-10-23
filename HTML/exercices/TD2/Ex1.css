@@ -1,0 +1,23 @@
+.First_liste{
+        width: auto;
+        height: 20px;
+        background-color: blue;
+}
+.Second_liste:nth-child(odd){
+    width: auto;
+    height: 20px;
+    background-color:fuchsia;
+}
+/*.Third_liste:first-child{
+    background-color: black;
+    color:white;
+}*/
+
+.Third_liste li:nth-child(3n){
+    background-color: black;
+    color: white;
+    background-position-x:-20px ;
+}
+body{
+    font-family:'Times New Roman', Times, serif ;
+}

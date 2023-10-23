@@ -17,11 +17,11 @@ class liste {
     liste() : first_element(nullptr) {}
     void ajouter(int new_elem){
         Element* new_element = new Element (new_elem);  /*adding new element*/
-        new_element->next_element=first_element;    /*first_element was empty in the start, now the new element will point to the nullptr */
-        first_element=new_element;                  /*to let the first_element get the new value and be pointed at as the first value*/
+        new_element->next_element=first_element;        /*first_element was empty in the start, now the new element will point to the nullptr */
+        first_element=new_element;                      /*to let the first_element get the new value and be pointed at as the first value*/
     }
     void supprimer(){
-        if(first_element != NULL){              /*checks if the list isnt empty*/
+        if(first_element != NULL){                      /*checks if the list isnt empty*/
             Element* Del_element = first_element;       /*pointer to delet the first element*/
             first_element=first_element->next_element;  /*moving the ptr from first element to make the second element become the first*/
             delete Del_element;            /*free the memory*/

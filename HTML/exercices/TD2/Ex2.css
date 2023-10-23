@@ -1,0 +1,51 @@
+tr{
+    border: 1px;
+    font-size: 6px;
+}
+tr:nth-child(odd){
+    background-color:cornsilk;
+}
+td{
+    text-align: left;
+}
+table{
+    width: 100%;
+    align-content:center;
+}
+div{
+    width: 60%;
+    height: auto;
+}
+h1{
+    opacity: 30%;
+    background-color: rgb(128, 217, 255);
+    font-size: 10px;
+    width: 100%;
+    text-align:right;
+    position:fixed;
+}
+#Head_tabl{
+    background-color: rgb(73, 255, 94);
+}
+.Links{
+    align-self: right;
+    height: auto;
+    width: 40%;
+    position:fixed;
+    top: 170px;
+    left: 60%;
+    align-content: center;
+    font-size: 10px;
+}
+
+.Empty{
+    border-width: 1px;
+    border-style:solid;
+    border-color: red;
+}
+strong:visited{
+    color: red;
+}
+#red_tr{
+    color: red;
+}

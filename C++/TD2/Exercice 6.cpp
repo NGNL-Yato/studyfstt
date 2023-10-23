@@ -6,7 +6,7 @@ int incrementer_ref(int& Input_Value){
 int  permuter_ref(int& Value_1,int& Value_2){
     int swap_value(Value_1);
     Value_1=Value_2;
-    Value_2=swap_value;
+    return Value_2=swap_value;
 }
 int icrementer_pt(int* Input_value){
     return (++(*Input_value));
@@ -14,7 +14,7 @@ int icrementer_pt(int* Input_value){
 int permuter_pt(int* first,int* second){
     int swap=*first;
     *first=*second;
-    *second=swap;
+    return *second=swap;
 }
 
 void Reference(){
@@ -36,7 +36,7 @@ void Pointer(){
 }
 
 
-main(){
+int main(){
     Reference();
-    Pointers();
+    Pointer();
 }

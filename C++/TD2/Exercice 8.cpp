@@ -33,7 +33,7 @@ class Nombre_Complexe{
     }
     void Equal(Nombre_Complexe& first,Nombre_Complexe& second){
         if(first.Reel == second.Reel){
-            if(second.Imaginary=first.Imaginary){
+            if((second.Imaginary) == (first.Imaginary)){
                 std::cout<<"Les deux nombres complexes sont égaux"<<std::endl;
             }
         }
@@ -87,5 +87,5 @@ int main(){
         }
     }while(choice !=0);
     std::cout<<"Thank you for using the program";
-    return NULL;
+    return 0;
 }       

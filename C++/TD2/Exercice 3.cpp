@@ -23,11 +23,12 @@ void formalisme_pointeur(){     //formalisme Array
     std::cout<<"Fill the table";
     int i,repet=0;
     do{
-        std::cout<<std::endl<<"Enter the value "<<repet++<<"of the Array :";
+        std::cout<<std::endl<<"Enter the value "<<++repet<<"of the Array :";
         std::cin>>*(Array+i);
         i++;
     }while(i<taille);
     std::cout<<"The values of the Array are : ";
+    i=0;
     do{
         std::cout<<*(Array+i)<<", ";
         i++;
@@ -35,7 +36,8 @@ void formalisme_pointeur(){     //formalisme Array
 } 
 
 main(){
-    formalisme_tableau();
+  /*  formalisme_tableau();
+    std::cout<<std::endl;   */
     formalisme_pointeur();
     std::cout<<std::endl;
 

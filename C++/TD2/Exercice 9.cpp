@@ -5,7 +5,7 @@ class Animal{
     public:
     std::string name;
     int age;
-void set_Value(const std::string& naming,int age_number){   /*why use the const here pb of compilor or what?*/
+void set_Value(const std::string naming,int age_number){   /*why use the const here pb of compilor or what?*/
     name=naming;
     age=age_number;
 }

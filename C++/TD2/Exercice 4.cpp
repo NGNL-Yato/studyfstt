@@ -16,7 +16,7 @@ main(){
     int *Array_2 = new int [i];
     for(repet = 0;repet < i ; repet++){
         *(Array_2+repet) = pow(*(Array_1+repet),2);
-        std::cout<<"The value "<<j++<<" of the New Array : "<<*(Array_2+repet)<<std::endl;
+        std::cout<<"The squareroot of  "<<*(Array_1+repet)<<" is : "<<*(Array_2+repet)<<std::endl;
     }
     delete[] Array_1;
     delete[] Array_2;

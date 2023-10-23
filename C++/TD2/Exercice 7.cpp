@@ -11,7 +11,7 @@ int *Array_2,Original_Array[10],repet,checking_value;
 std::cout<<"Fill the Array with 10 Values :"<<std::endl;  
 do{                                         /*Filling the array*/
     std::cout<<"Give the Value for the element "<<repet<<" : "<<std::endl;   
-    std::cin>>Original_Array[repet];''
+    std::cin>>Original_Array[repet];
     repet++;
 }while(repet<10);
 for(int repetition;repetition<10;repetition++){         /*Repeting the check 10times*/
