@@ -1,23 +1,37 @@
-.First_liste{
-        width: auto;
-        height: 20px;
-        background-color: blue;
+.First_liste ol li:first-child, .First_liste ol li:last-child{
+        background-color: fuchsia;
+        color: white;
 }
-.Second_liste:nth-child(odd){
-    width: auto;
-    height: 20px;
-    background-color:fuchsia;
-}
-/*.Third_liste:first-child{
-    background-color: black;
-    color:white;
-}*/
 
-.Third_liste li:nth-child(3n){
+.Second_liste ol li:first-child, .Second_liste ol li:last-child{
     background-color: black;
     color: white;
-    background-position-x:-20px ;
 }
-body{
-    font-family:'Times New Roman', Times, serif ;
+
+ol{
+    counter-reset: primary;
 }
+ol ol{
+    counter-reset: secondary;
+}
+ol ol ol{
+    counter-reset: tertiary;
+}
+ol li{
+    display: block;
+    margin-left:5px;
+}
+
+ol.First_liste li:before{
+    content: counters(primary, ".",upper-roman) ".";
+    counter-increment: primary;
+}
+
+ol.First_liste li ol li:before{
+    content: counters(primary, ".",upper-roman) "." counters(secondary, ".",decimal ) "  ";
+    counter-increment: secondary;
+}
+ol.First_liste li ol li ol li:before{
+    content: counters(primary, ".",upper-roman) "." counters(secondary, ".",decimal ) "-" counters(tertiary, "-",lower-alpha) "  ";
+    counter-increment: tertiary;
+}       
