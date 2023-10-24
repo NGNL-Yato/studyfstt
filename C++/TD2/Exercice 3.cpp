@@ -36,8 +36,8 @@ void formalisme_pointeur(){     //formalisme Array
 } 
 
 main(){
-  /*  formalisme_tableau();
-    std::cout<<std::endl;   */
+    formalisme_tableau();
+    std::cout<<std::endl;   
     formalisme_pointeur();
     std::cout<<std::endl;
 
