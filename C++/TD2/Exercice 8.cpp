@@ -1,5 +1,5 @@
 #include<iostream>
-
+#include<math.h>
 class Nombre_Complexe{ 
     public:     
     float Reel;
@@ -27,7 +27,7 @@ class Nombre_Complexe{
         }
         else{
             total.Reel=(first.Reel*second.Reel)+(first.Imaginary*second.Imaginary*-1);
-            total.Imaginary=(first.Reel*second.Imaginary)+(first.Imaginary+second.Reel);
+            total.Imaginary=(first.Reel*second.Imaginary)+(first.Imaginary*second.Reel);
             std::cout<<"La multiplication des deux Nombres Complexe est : "<<total.Reel<<"+"<<total.Imaginary<<" i."<<std::endl;
           }  
     }
@@ -42,24 +42,16 @@ class Nombre_Complexe{
     void Division(Nombre_Complexe& first,Nombre_Complexe& second){
         Nombre_Complexe Part1,Part2,total;
          if((first.Reel == second.Reel) && (((second.Imaginary+first.Imaginary) == 0) || (second.Imaginary+first.Imaginary) == first.Imaginary*2) ){
-            Part1.Reel=(first.Reel*second.Reel)+((first.Imaginary*second.Imaginary)*-1);
+            Part1.Reel=(first.Reel*second.Reel)+(pow(second.Imaginary,2));
         }
         else{
-            Part1.Reel=(first.Reel*second.Reel)+(first.Imaginary*second.Imaginary*-1);
-            Part1.Imaginary=(first.Reel*second.Imaginary)+(first.Imaginary+second.Reel);
+            Part1.Reel=(first.Reel*second.Reel)+(first.Imaginary*second.Imaginary);
+            Part1.Imaginary=((first.Reel*second.Imaginary)*-1)+(first.Imaginary*second.Reel);
         }
-        
-        if((first.Reel == second.Reel) && ((((second.Imaginary*-1)+first.Imaginary) == 0) || ((second.Imaginary*-1)+first.Imaginary) == first.Imaginary*2) ){
-            Part2.Reel=(first.Reel*second.Reel)+((first.Imaginary*second.Imaginary)*-1);
-        }
-        else{
-            Part2.Reel=(first.Reel*second.Reel)+(first.Imaginary*second.Imaginary*-1);
-            Part2.Imaginary=(first.Reel*(second.Imaginary*-1))+(first.Imaginary+second.Reel);
-        }  
-        total.Reel=Part1.Imaginary/Part2.Imaginary;
-        total.Imaginary=Part1.Imaginary/Part2.Imaginary;
+        Part2.Reel=(first.Reel*second.Reel)+(pow(second.Imaginary,2));
+        total.Reel=Part1.Reel/Part2.Reel;
+        total.Imaginary=Part1.Imaginary/Part2.Reel;
         std::cout<<"La division des deux Nombres Complexe est : "<<total.Reel<<"+"<<total.Imaginary<<"i."<<std::endl;
-
     }
 
 
@@ -86,6 +78,6 @@ int main(){
             default:continue;
         }
     }while(choice !=0);
-    std::cout<<"Thank you for using the program";
+    std::cout<<"Thank you for using the program"<<std::endl;
     return 0;
 }       
