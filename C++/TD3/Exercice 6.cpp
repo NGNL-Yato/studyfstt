@@ -9,11 +9,11 @@ int * adr ; // adresse zone dynamique contenant les éléments
 public :
 vect (int) ; // constructeur
 ~vect () ; // destructeur
-int &operator[](int index){
-    if (index >= 0 && index < nelem){   /* Need to verify this part (Error without it l13 to l17)*/
-        return adr[index];
+int& operator[](int Input){
+    if (Input >= 0 && Input < nelem){   /* Take you out if the value if false */
+        return adr[Input];
     }
-        throw "Index out of bounds";
+        throw "Invalid Input";
     }   
 } ;
 vect::~vect(){ delete[]adr;}    /*Giving instructions to the destructor*/
