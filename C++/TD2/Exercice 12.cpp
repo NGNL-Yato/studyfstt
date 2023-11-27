@@ -2,7 +2,6 @@
 
 class Test{
     private:
-    int i;
     static int Number_of_calls;
     public:
     static void Display(){

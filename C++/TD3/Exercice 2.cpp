@@ -11,24 +11,23 @@ void showlist(list<int> g){
     cout<<'\n';
 }
 void TriBull(list<int>& Input){     /*https://fr.wikipedia.org/wiki/Tri_%C3%A0_bulles fonctionnement tri bulle*/
-    int Checking;
+    bool Checking=false;
     do{
         Checking=0;
-        for(list<int>::iterator Actual=Input.begin();Actual!=prev(Input.end());++Actual){ /*Actual!=Input.end() Donne une qui commence par les elements les plus grands aux plus petits*/
-            list<int>::iterator Next_element = next(Actual);
-            if (*Next_element>*Actual){
-                swap(*Next_element,*Actual);
-                Checking++;
+        for(list<int>::iterator Actual=Input.begin();Actual!=Input.end();++Actual){ /*Actual!=Input.end() Donne une qui commence par les elements les plus grands aux plus petits*/
+            if (*next(Actual)>*Actual){
+                swap(*next(Actual),*Actual);
+                Checking = true;
             }
         }
-    }while( Checking !=0);
+    }while( Checking );
 }
 
 void triInsertion(list<int>& Input){       /*https://fr.wikipedia.org/wiki/Tri_par_insertion algorithmic explanation of insertion*/
-    for(list<int>::iterator Actual=next(Input.begin());Actual!=prev(Input.end());++Actual){
+    for(list<int>::iterator Actual=next(Input.begin());Actual!=Input.end();++Actual){
         int here = *Actual;
         list<int>::iterator before = Actual;
-        while(before != Input.begin() && *prev(before) < here){
+        while(before != Input.begin() && *prev(before) > here){
             *before = *prev(before);
             --before;
         };

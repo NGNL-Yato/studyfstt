@@ -22,7 +22,7 @@ cout << "Entrez le diviseur: " << endl;
 cin >> y ;
 try{
     int test=Test::division( x, y );
-        if( x <=10 ){
+        if( x < sizeof(Test::tableau) && (Test::tableau[x]!=0)){
     cout << "The result of the division is: " << test << endl;
     Passing_Test=true;
     }

@@ -6,7 +6,7 @@ using namespace std;
 /* Formalisme pointeur*/
 int main(){
     int size,i;
-    cout<<"Give a size to the array : "
+    cout<<"Give a size to the array : ";
     cin>>size;
     cout<<endl;
     int* Tableau2 = new int[size];
