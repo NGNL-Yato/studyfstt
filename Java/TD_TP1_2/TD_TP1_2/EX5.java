@@ -5,8 +5,10 @@ import java.util.*;
  * affiche son maximum (maximum des éléments entrés au clavier)?.
  */
 public class EX5 {
+	private static Scanner sc;
+
 	public static void main(String[] args){
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		System.out.println("Donner la taille du tableau : ");
 		int Size = sc.nextInt();
 		int[] Tab = new int[Size];

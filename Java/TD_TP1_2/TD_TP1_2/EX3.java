@@ -1,5 +1,5 @@
 package TD_TP1_2;
-
+import java.util.Scanner;
 /* ■ Ecrire un programme qui permet de créer
  * des comptes bancaires pour des clients
  * ■ Le programme permet de faire un versement
@@ -47,6 +47,19 @@ public class EX3 {
 		EX3 Compte_3 = new EX3 ();
 		Compte_3.SetFirstName("Ziyad");
 		Compte_3.SetFamilyName("Mo");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Donnez le Prénom du nouveau client :");
+		String First_Name = sc.next();
+		
+		System.out.println("Donnez le Nom de Famille du nouveau client :");
+		String Family_Name = sc.next();
+		
+		System.out.println("Donnez le Montant initial du nouveau client :");
+		int Money_In_Bank = sc.nextInt();
+		
+		EX3 Compte_4 = new EX3 (First_Name,Family_Name,Money_In_Bank);
+		Compte_4.Display_Acc_Info();
+
 		Compte_3.SetCurrent_Money(12324.31);
 		Compte_3.Display_Acc_Info();
 		Compte_1.Versement(100);
@@ -57,6 +70,9 @@ public class EX3 {
 		Compte_3.Display_Acc_Info();
 		Compte_3.Debit(5533.93);
 		Compte_3.Display_Acc_Info();		
+		
+		Compte_4.Versement(100);
+		Compte_4.Display_Acc_Info();
 	}
 	
 }

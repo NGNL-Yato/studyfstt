@@ -1,5 +1,4 @@
 package TD_TP1_2;
-import java.util.*;
 
 /* Dans un programme écrit en Langage JAVA, essayer de:
  * ➢ Créer et initialiser une matrice contenant deux tableaux de 2
