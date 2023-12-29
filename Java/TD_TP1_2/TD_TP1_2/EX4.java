@@ -32,6 +32,11 @@ public class EX4 {
         for (int i = 1; i < 7;i++ ) {
         	System.out.println("L'élève classé "+i+" est : "+Students[i-1].Nom+" "+ Students[i-1].Prenom + " avec la note : " + Students[i-1].Note);
         }
+        double Moyenne = 0 ;
+        for (int j = 1; j < 7;j++ ) {
+        	Moyenne += (Students[j-1].getNote())/(j+1);
+        } 
+        System.out.println("La note moyenne de la classe est :" + Moyenne);
 	}
 	
 }

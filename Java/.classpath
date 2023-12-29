@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="Facturation/" kind="src" path="TD_TP1_2"/>
+	<classpathentry excluding="Facturation/|TP3_4/|TD_TP_5_6/" kind="src" path="TD_TP1_2"/>
+	<classpathentry kind="src" path="TD_TP1_2/TP3_4"/>
+	<classpathentry kind="src" path="TP_TD_5_6"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
