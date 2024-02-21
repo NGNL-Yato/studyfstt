@@ -8,6 +8,9 @@ public class Livre extends Document {
 	public Livre (int ID,String titre) {
 		super(ID,titre);
 	}
+	public Livre (int ID) {
+		super (ID);
+	}
 	public Livre (String Aut,int P_nbr,int ID,String titre) {
 		super (ID,titre);
 		this.Author = Aut;

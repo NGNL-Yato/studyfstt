@@ -12,6 +12,7 @@ public class Figure {
         this.couleur = couleur;
         instances[abscisse][ordonnee] = this;
     }
+    public Figure () {};
 
     public static Figure[][] getInstances() {
         return instances;

@@ -26,7 +26,8 @@ public class Bibliotheque {
                 case 1:
                 	System.out.println("Add Doc title : "); 
                 	String titre = sc.next();
-                    Livre newLivre = new Livre(++IDS,titre);
+                    Livre newLivre = new Livre(++IDS);
+                    newLivre.setTitre(titre);
                     newLivre.Add_Book();
                     listeDeDocuments.insertDocument(newLivre, LID, LID);
                     LID++;

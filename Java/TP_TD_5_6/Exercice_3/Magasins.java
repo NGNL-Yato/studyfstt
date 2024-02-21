@@ -22,7 +22,7 @@ public class Magasins {
 			Thread.sleep(500);
 			System.out.println("1-Lancer une commande\n2-Changer le prix d'une commande");
 			System.out.println("3-Vérfier le stock\n4-Rajouter un produit dans le stock");
-			System.out.println("\n5-Terminer la journée\n6-Verifier rendement\n7-Promotion\n8-Restock");
+			System.out.println("5-Terminer la journée\n6-Verifier rendement\n7-Promotion\n8-Restock");
 			int Choices = sc.nextInt();
 			if(Choices == 1) {
 				magasin.LancerCommande();
