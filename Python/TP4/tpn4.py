@@ -4,7 +4,7 @@ def Fill_Panier(Panier):
     while i < quantity:
         code = input("Entrez le code : ")
         if code in Panier:
-            print("Product already exists.")
+            print("Product already exists...")
             continue
         nom = input("Entrez le nom : ")
         PU = float(input("Entrez le prix unitaire : "))
@@ -25,46 +25,60 @@ def Fill_Panier(Panier):
 def print_bucket(Panier):
     print ("{:<12}{:<12}{:<12}{:<12}".format("Code du produit", "Nom du produit", "Quantité", "Prix Unitaire"))
     # {:<12}.format to force the format to be 12 character
-    total = 0
     for code, info in sorted(Panier.items()):
         print ("{:<12}{:<12}{:<12}{:<12}".format(code, info['nom'], str(info['quantity']), str(info['PU'])))
-        total += info['quantity'] * info['PU']
-    print ("Prix total : ", total)
+    prix_total(Panier)
+
 
 def prix_total (Panier):
     total = 0
-    for code, info in sorted(Panier.items()):
+    for info in Panier.items():
         total += info['quantity'] * info['PU']
     print ("Prix total : ", total)
 
 def modify_product(Panier):
-    code = input("Entrez le code du produit à modifier : ")
-    if code in Panier:
-        print("1. Modifier le nom")
-        print("2. Modifier le prix unitaire")
-        print("3. Modifier la quantité")
-        choice = int(input("Que voulez-vous modifier? "))
-        match choice:
-            case 1:
-                nom = input("Entrez le nouveau nom : ")
-                Panier[code]['nom'] = nom
-            case 2:
-                PU = float(input("Entrez le nouveau prix unitaire : "))
-                Panier[code]['PU'] = PU
-            case 3:
-                quantity = int(input("Entrez la nouvelle quantité : "))
-                Panier[code]['quantity'] = quantity
-            case _:
-                print("Choix non valide.")
+    choice = int(input("Voulez-vous change le produit par code (1) ou par index (2)? "))
+    if choice == 1:
+        code = input("Entrez le code du produit à modifier : ")
+        for product in Panier:
+            if product['code'] == code:
+                modify_product_details(product)
+                break
+        else:
+            print("Non existant product...")
+    elif choice == 2:
+        index = int(input("Entrez l'index du produit à modifier : "))
+        if 0 <= index < len(Panier):
+            modify_product_details(Panier[index])
+        else:
+            print("Index non valide.")
     else:
-        print("Produit non trouvé.")
+        print("Choix non valide.")
 
+def modify_product_details(product):
+    print("1. Modifier le nom")
+    print("2. Modifier le prix unitaire")
+    print("3. Modifier la quantité")
+    choice = int(input("Que voulez-vous modifier? "))
+    match choice:
+        case 1:
+            nom = input("Entrez le nouveau nom : ")
+            product['nom'] = nom
+        case 2:
+            PU = float(input("Entrez le nouveau prix unitaire : "))
+            product['PU'] = PU
+        case 3:
+            quantity = int(input("Entrez la nouvelle quantité : "))
+            product['quantity'] = quantity
+        case _:
+            print("Choix non valide.")
+            
 def delete_product(Panier):
     code = input("Entrez le code du produit à supprimer : ")
     if code in Panier:
         del Panier[code]
     else:
-        print ("Produit non trouvé.")
+        print("Non existant product...")
 
 Panier = {}
 print ("Welcome to the store !")

@@ -54,7 +54,7 @@ def modify_product(Panier):
                 print("Choix non valide.")
             break
     else:
-        print("Produit non trouvé.")
+        print("Non existant product...")
 
 def delete_product(Panier):
     code = input("Entrez le code du produit à supprimer : ")
@@ -63,7 +63,7 @@ def delete_product(Panier):
             Panier.remove(product)
             break
     else:
-        print ("Produit non trouvé.")
+        print ("Non existant product...")
 
 Panier = []
 print ("Welcome to the store !")
@@ -72,18 +72,19 @@ while True:
     if not Panier and option in [2, 3, 4, 5]:
         print("The bucket is empty. Please add a product first.")
         continue
-    if option == 1:
-        Fill_Panier(Panier)
-    elif option == 2:
-        prix_total(Panier)
-    elif option == 3:
-        print_bucket(Panier)
-    elif option == 4:
-        modify_product(Panier)
-    elif option == 5:
-        delete_product(Panier)
-    elif option == 6:
-        print("Thank you for your visit, see you later")
-        break
-    else:
-        print("Input Error, try again")
+    match option :
+        case 1:
+            Fill_Panier(Panier)
+        case 2 :
+            prix_total(Panier)
+        case 3 :
+            print_bucket(Panier)
+        case 4:
+            modify_product(Panier)
+        case 5:
+            delete_product(Panier)
+        case 6:
+            print("Thank you for your visit, see you later")
+            break
+        case __ :
+            print("Input Error, try again")
