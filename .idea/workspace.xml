@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="NONE" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -21,16 +21,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70442355-068d-4102-a8f3-daede0a1b2dd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/tasks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C++/TD2/Exercice 3.2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/C++/TD2/Exercice 3.2.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C++/TD3/Exercice 1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/C++/TD3/Exercice 1.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/C++/TD3/Exercice 2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/C++/TD3/Exercice 2.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/exercices/TD2/Ex1.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/exercices/TD2/Ex1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/exercices/TD2/Ex1.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/exercices/TD2/Ex1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/exercices/TD2/Ex2.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/exercices/TD2/Ex2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/exercices/TD2/Ex2.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/exercices/TD2/Ex2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/TP5/Ex1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/TP5/Ex1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/TP5/Ex2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/TP5/Ex2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,24 +53,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Zakaria/Desktop/studyfstt&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Zakaria/Desktop/studyfstt",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "emulator",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
