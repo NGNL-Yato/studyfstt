@@ -8,13 +8,16 @@ class Livre :
         self._maison_edition = maison_edition
     
     def ComparerLivres (self, livre) :
-        if self._ISBN == livre._ISBN :
+        if self._ISBN == livre.getISBN() :
             return True
         else :
             return False
     
+    def getTitre (self) :
+        return self._titre
+    
     def ComparerLivrestitre (self, titre) :
-        if self._titre == titre :
+        if self.gettitre () == titre :
             return True
         else :
             return False
@@ -84,26 +87,28 @@ def Affichertousleslivres (livre_librairie) :
 def RechercherLivreISBN (ISBN, livre_librairie) :
     counter = 0
     for livre in livre_librairie :
-        if livre.ComparerLivres(ISBN) == True :
+        if livre.getISBN() == ISBN :
             livre.AfficherInfos()
             counter += 1
     if counter == 0 :
         print ("Ce livre n'existe pas")
-        
 
 def AppliquerRemiseparISBN (ISBN, livre_librairie) :
+    counter = 0
     for livre in livre_librairie :
-        if livre.CompareLivre(ISBN) == True :
+        if livre.getISBN() == ISBN :
             reduction = float (input ("Entrez le pourcentage de réduction : "))
             livre.AppliquerPromotion(reduction)
-        else :
-            print ("Ce livre n'existe pas")
+            counter += 1
+    if counter == 0 :
+        print ("Ce livre n'existe pas")
 
 def AppliquerRemisepartitre(titre, livre_librairie) :
     for livre in livre_librairie :
-        if livre.ComparerLivrestitre() == True :
+        if livre.ComparerLivrestitre(titre) == True :
             reduction = float (input ("Entrez le pourcentage de réduction : "))
             livre.AppliquerPromotion(reduction)
+
 
 def AppliquerRemise (livre_librairie) :
     choice = int (input ("Voulez-vous appliquer une remise (1) par ISBN  \n(2) par titre ?"))
